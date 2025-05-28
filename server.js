@@ -14,11 +14,9 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-app.use(express.static(path.join(__dirname, "public")))
-
 // Inicializa o aplicativo Express
 const app = express();
-
+app.use(express.static(path.join(__dirname, "public")))
 // Define a porta para o servidor backend.
 // Usa a variável de ambiente PORT se definida, caso contrário, usa 3001.
 // É importante usar uma porta diferente do seu frontend (ex: Live Server em 5500).
